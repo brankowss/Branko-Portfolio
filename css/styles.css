@@ -1,0 +1,50 @@
+/* responsive-image */
+.responsive-image {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-image {
+      width: 150px;
+      height: 150px;
+  }
+}
+
+/* Light Theme for Navbar Logo Text */
+.navbar-brand {
+  color: #000000; /* Black text color */
+}
+
+/* Dark Theme for Navbar Logo Text */
+body.dark .navbar-brand {
+  color: #ffffff; /* White text color */
+}
+
+/* Light Theme for Navbar Background */
+.navbar {
+  background-color: #ffffff; /* White background color */
+}
+
+/* Dark Theme for Navbar Background */
+body.dark .navbar {
+  background-color: #333333; /* Dark background color */
+}
+
+/* Light Theme */
+body.light {
+    background-color: #ffffcc; /* Cream color */
+    color: #333333; /* Dark text color */
+  }
+  
+  /* Dark Theme */
+  body.dark {
+    background-color: #333333; /* Dark background color */
+    color: #ffffff !important; /* Light text color */
+  }
+  
+  
+  
+  
