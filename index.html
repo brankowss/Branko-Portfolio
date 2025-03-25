@@ -41,44 +41,44 @@
             --card-text: #121212;
         }
 
+        .container.narrow-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .section-title {
             font-size: 1.5rem;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 30px 0;
             text-align: center;
+            letter-spacing: 0.5px;
         }
 
         .service-item {
             background: var(--card-bg);
             color: var(--card-text);
-            padding: 15px;
-            border-radius: 8px;
+            padding: 20px 15px;
+            border-radius: 10px;
             transition: all 0.3s ease;
+            margin: 10px 0;
         }
 
         .cta-card {
             background: var(--primary-color);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 12px;
             text-align: center;
+            margin: 30px auto;
+            max-width: 600px;
         }
 
         .icon-links {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .icon-links div {
-            text-align: center;
-        }
-
-        .icon-description {
-            margin-top: 5px;
-            font-size: 14px;
+            gap: 25px;
+            margin-top: 25px;
         }
 
         .theme-toggle-container {
@@ -89,109 +89,171 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 2rem;
             margin: 2rem 0;
+            flex-wrap: wrap;
         }
 
         .social-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
             transition: all 0.3s ease;
             text-decoration: none;
+            width: 120px;
         }
 
         .social-icon:hover {
             color: var(--text-color);
-            transform: scale(1.15);
+            transform: scale(1.1);
         }
 
-        .btn-outline-primary {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-        }
-
-        .social-icon .icon-description {
-        display: block;
-        font-size: 0.9rem;
-        margin-top: 8px;
-        transition: color 0.3s ease;
-        }
-        .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 2.5rem;
-        margin: 2rem 0;
-        }
-
-        .social-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            }
-
-        .icon-description {
-            margin-top: 8px;
-            font-size: 0.9rem;
-            text-align: center;
-            color: inherit;
-        }
         .database-stack {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
-            width: 100%;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
 
         .database-icon {
             text-align: center;
-            min-width: 100px;
+            min-width: 90px;
+            padding: 10px;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .service-item h5 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .service-item i {
+            font-size: 2rem;
+        }
+       
+        .icon-links, .database-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+
+        .container-connect {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 600px;
+        }
+
+        .icon-links div, .database-icon, .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .icon-links i, .database-icon i, .social-icon i {
+            font-size: 2.2rem; 
+        }
+
+        .icon-description {
+            font-size: 0.85rem; 
+            margin-top: 4px;
         }
     </style>
-    
 </head>
 <body>
-    <!-- Theme Toggle -->
     <div class="theme-toggle-container">
         <button onclick="toggleTheme()" class="btn btn-outline-primary">
             <i class="fas fa-moon"></i>
         </button>
     </div>
 
-    <div class="container py-5 text-center">
+    <div class="container narrow-container py-4 text-center">
         <h1 class="mb-3">Branko - Data Engineer</h1>
-        <p class="lead">I build scalable, well-orchestrated data pipelines. Specializing in automation,  SQL/NoSQL databases, cloud platforms, and ETL/ELT workflows.</p>
-    <!-- "Data Engineer passionate about building scalable pipelines and automating data workflows. Expertise in automation, cloud-native architectures (AWS/GCP), and modern ETL/ELT workflows using tools like Airflow, dbt, and Snowflake."-->
+        <p class="lead">I build scalable, well-orchestrated data pipelines. Specializing in automation, SQL/NoSQL databases, cloud platforms, and ETL/ELT workflows.</p>
     </div>
 
-    <div class="container">
+    <div class="container narrow-container">
         <div class="section-title">What I Do</div>
-        <div class="row text-center">
-            <div class="col-md-4"><div class="service-item shadow-sm p-4 rounded"><i class="fas fa-network-wired fs-2"></i><h5>Data Pipelines</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-4 rounded"><i class="fas fa-microchip fs-2"></i><h5>Data Automation</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-4 rounded"><i class="fas fa-server fs-2"></i><h5>Cloud & Storage</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-4 rounded"><i class="fas fa-spider fs-2"></i><h5>Web Scraping</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-4 rounded"><i class="fas fa-arrow-right-arrow-left fs-2"></i><h5>Data Transformation</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-4 rounded"><i class="fas fa-file-export fs-2"></i><h5>Data Export</h5></div></div>
+        <div class="row text-center g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item">
+                    <i class="fas fa-network-wired"></i>
+                    <h5>Data Pipelines</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item">
+                    <i class="fas fa-microchip"></i>
+                    <h5>Data Automation</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item">
+                    <i class="fas fa-server"></i>
+                    <h5>Cloud & Storage</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item">
+                    <i class="fas fa-spider"></i>
+                    <h5>Web Scraping</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item">
+                    <i class="fas fa-arrow-right-arrow-left"></i>
+                    <h5>Data Transformation</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-item">
+                    <i class="fas fa-file-export"></i>
+                    <h5>Data Export</h5>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container mt-4">
+    <div class="container narrow-container mt-4">
         <div class="section-title">Export Data in Formats</div>
-        <div class="row text-center">
-            <div class="col-md-4"><div class="service-item shadow-sm p-3 rounded"><i class="fas fa-file-csv fs-2"></i><h5>CSV</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-3 rounded"><i class="fas fa-file-code fs-2"></i><h5>JSON</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-3 rounded"><i class="fas fa-file-excel fs-2"></i><h5>Excel (XLSX)</h5></div></div>
-            <!-- <div class="col-md-4"><div class="service-item shadow-sm p-3 rounded"><i class="fas fa-database big-icon fs-2"></i><h5>SQL Dumps</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-3 rounded"><i class="fas fa-table fs-2"></i><h5>Parquet</h5></div></div>
-            <div class="col-md-4"><div class="service-item shadow-sm p-3 rounded"><i class="fas fa-file-archive fs-2"></i><h5>Avro</h5></div></div> -->
+        <div class="row text-center g-3">
+            <div class="col-4 col-md-4">
+                <div class="service-item">
+                    <i class="fas fa-file-csv"></i>
+                    <h5>CSV</h5>
+                </div>
+            </div>
+            <div class="col-4 col-md-4">
+                <div class="service-item">
+                    <i class="fas fa-file-code"></i>
+                    <h5>JSON</h5>
+                </div>
+            </div>
+            <div class="col-4 col-md-4">
+                <div class="service-item">
+                    <i class="fas fa-file-excel"></i>
+                    <h5>Excel</h5>
+                </div>
+            </div>
         </div>
         <p class="text-center mt-4">For other formats, please contact me for custom arrangements.</p>
     </div>
@@ -221,7 +283,7 @@
             </div> -->
     
             <!-- Data Engineering Essentials -->
-<!--             <div><i class="fas fa-project-diagram fa-3x"></i><div class="icon-description">Airflow</div></div> -->
+            <!-- <div><i class="fas fa-project-diagram fa-3x"></i><div class="icon-description">Airflow</div></div> -->
             <!-- <div><i class="fas fa-bolt fa-3x"></i><div class="icon-description">Spark</div></div>
             <div><i class="fas fa-stream fa-3x"></i><div class="icon-description">Kafka</div></div> -->
     
@@ -250,9 +312,45 @@
             </div>
         </div>
     </div>
-
-    <div class="container mt-4">
-        <div class="section-title">Connect with me</div>
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+    
+        .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.3s ease-in-out;
+        }
+    
+        .social-icon i {
+            transition: transform 0.3s ease;
+        }
+    
+        .icon-description {
+            font-size: 0.8rem;
+            margin-top: 4px;
+            color: var(--text-color);
+        }
+    
+        .social-icon:hover i {
+            transform: scale(1.15);
+            color: var(--text-color);
+        }
+        .cta-card {
+        margin-bottom: 0 !important;  /* footer padding */
+        padding-bottom: 1rem;  /* footer padding */
+        }
+    </style>
+    
+    <div class="section-title">Connect with me</div>
+    <div class="container-connect">
         <div class="social-icons">
             <a href="https://github.com/brankowss" target="_blank" class="social-icon">
                 <i class="fab fa-github"></i>
@@ -272,12 +370,13 @@
             </a>
         </div>
     </div>
-
+    
+    </div>
     <div class="container mt-4">
         <section class="py-2">
             <div class="cta-card shadow-lg">
                 <h4 class="mb-2">🚀 Need a Data Engineer?</h4>
-                <p class="fs-6 mb-3"><strong>I help businesses automate workflows, build ETL pipelines, and optimize data storage.</strong></p>
+                <p class="fs-6 mb-3"><strong>I help businesses automate workflows, build data pipelines, and optimize data storage.</strong></p>
                 <p class="fs-6">Let’s discuss your project. Contact me now!</p>
                 <a href="mailto:branko.contact@proton.me" class="btn btn-light btn-lg px-4">
                     <i class="fas fa-paper-plane me-2"></i>Let's Talk
@@ -300,7 +399,6 @@
             }
         }
 
-        // Load saved theme
         const savedTheme = localStorage.getItem('theme');
         if(savedTheme === 'light') {
             document.body.classList.add('light-mode');
@@ -309,10 +407,9 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<!-- Footer -->
-<footer class="mt-auto py-4 text-center">
-    <div class="container">
-        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Made with ❤️ by Branko </p>
+<footer class="mt-2 py-3 text-center">
+    <div class="container narrow-container">
+        <p class="mb-0">&copy; <script>document.write(new Date().getFullYear());</script> Made with ❤️ by Branko</p>
     </div>
 </footer>
 </html>
